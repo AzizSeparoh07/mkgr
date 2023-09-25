@@ -25,7 +25,7 @@
                 </ul>
 
                 <div class="d-none d-lg-block">
-                <a href="<?php echo base_url() ?>login" class="navbar-icon bi-person smoothscroll"></a>
+                <a href="<?php echo base_url() ?>login/LoginAdmin" class="navbar-icon bi-person smoothscroll"></a>
                 </div>
             </div>
         </div>

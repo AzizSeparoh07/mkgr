@@ -186,6 +186,7 @@ class Datasiswa extends CI_Controller {
 
             //   $array_data[] = $data;
             $insert = $this->Msiswa->ExcelSiswa($data);
+            
             $data2 =array(
                 'username' => $sheet_data[$i]['6'],
                 'password' =>md5($sheet_data[$i]['1']),
