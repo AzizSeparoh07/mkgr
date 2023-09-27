@@ -19,23 +19,23 @@
                                             <th>Jenis Kelamin</th>
                                             <th>Tempat Lahir</th>
                                             <th>No WhatsApp</th>
-                                            <th>Periode</th>
-                                            <th>Aksi</th>
+                                            <!-- <th>Periode</th> -->
+                                            <!-- <th>Aksi</th> -->
                                         </tr>
                                     </thead>  
                                     <tbody>
+                                        <?php foreach ($mahasiswa as $ms) {} ?>
                                         <tr>
-                                            <td>Dina Musfida</td>
-                                            <td>12121212</td>
-                                            <td>Perempuan</td>
-                                            <td>Banda Aceh</td>
-                                            <td>0822235345345</td>
-                                            <td>2023</td>
-                                            <td> 
+                                            <td><?=$ms['nama']?></td>
+                                            <td><?=$ms['NIK']?></td>
+                                            <td><?=$ms['jenis_kelamin']?></td>
+                                            <td><?=$ms['tempat_lahir']?></td>
+                                            <td><?=$ms['no_wa']?></td>
+                                            <!-- <td> 
                                                 <a href="#" class="btn btn-success btn-circle btn-sm">
                                                     <i class="fas fa-edit"></i>
                                                 </a> 
-                                            </td>
+                                            </td> -->
                                         </tr>
                                    
                                         

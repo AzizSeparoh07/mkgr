@@ -18,6 +18,17 @@ class Siswa_model extends CI_Model
 		}
 	}
 
+	function updateSiswa($data,$NIK){
+		return $this->db->update('mahasiswa', $data , array('NIK' => $NIK ));
+	}
+
+	function IsiSurvei($data2){
+		$insert = $this->db->insert('hasil_survei', $data2);
+		if($insert){
+			return true;
+		}
+	}
+
    
 }
 

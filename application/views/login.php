@@ -19,6 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url();?>assets/admin/css/sb-admin-2.min.css ?>" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
 
 </head>
 
@@ -41,19 +43,22 @@
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">TRACER STUDY</h1>
                                     </div>
-                                    <form class="user">
+                                    <form class="user" method="POST" action="<?= base_url(); ?>login/Plogin">
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                        <select id="select-state" name="username" placeholder="Pilih.....">
+                                        <?php foreach ($mahasiswa as $ms) { ?>
+                                            <option value="<?=$ms['NIK']?>"><?=$ms['NIK']?> - <?=$ms['nama']?></option>
+                                        <?php } ?>
+                                        </select>
+
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Contoh yyyy/mm/dd">
+                                                id="exampleInputPassword" name="password" placeholder="Contoh yyyy/dd/mm">
                                         </div> 
-                                        <a href="<?php echo site_url('Homeadmin/index') ?>" class="btn btn-primary btn-user btn-block">
+                                        <button class="btn submit btn-primary btn-user btn-block">
                                             Login
-                                        </a> 
+                                        </button> 
                                     </form>
                                 </div>
                             </div>
@@ -70,12 +75,22 @@
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url();?>assets/admin/vendor/jquery/jquery.min.js ?>"></script>
     <script src="<?php echo base_url();?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js ?>"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url();?>assets/admin/vendor/jquery-easing/jquery.easing.min.js ?>"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="<?php echo base_url();?>assets/admin/js/sb-admin-2.min.js ?>"></script>
+
+    <script>
+         $(document).ready(function () {
+      $('select').selectize({
+          sortField: 'text'
+      });
+  });
+    </script>
 
 </body>
 

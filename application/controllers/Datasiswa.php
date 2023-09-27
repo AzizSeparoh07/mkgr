@@ -171,26 +171,26 @@ class Datasiswa extends CI_Controller {
 
               $data = array(
 
-                        'nama'	=> $sheet_data[$i]['0'],
-						'NIK'	=> $sheet_data[$i]['1'],
-						'jenis_kelamin'	=> $sheet_data[$i]['2'],
-						'tempat_lahir'	=> $sheet_data[$i]['3'],
-						'tanggal_lahir'	=> $sheet_data[$i]['4'],
-						'no_wa'	=> $sheet_data[$i]['5'],
-						'email'	=> $sheet_data[$i]['6'],
-						'prodi'	=> $sheet_data[$i]['7'],
-						'masuk_kuliah'	=> $sheet_data[$i]['8'],
-						'lulus_kuliah'	=> $sheet_data[$i]['9'],
-						'IPK'	=> $sheet_data[$i]['10']
+                        'nama'	=> $sheet_data[$i]['1'],
+						'NIK'	=> $sheet_data[$i]['2'],
+						'jenis_kelamin'	=> $sheet_data[$i]['3'],
+						'tempat_lahir'	=> $sheet_data[$i]['4'],
+						'tanggal_lahir'	=> $sheet_data[$i]['5'],
+						'no_wa'	=> $sheet_data[$i]['6'],
+						'email'	=> $sheet_data[$i]['7'],
+						'prodi'	=> $sheet_data[$i]['8'],
+						'masuk_kuliah'	=> $sheet_data[$i]['9'],
+						'lulus_kuliah'	=> $sheet_data[$i]['10'],
+						'IPK'	=> $sheet_data[$i]['11']
                     );
 
             //   $array_data[] = $data;
             $insert = $this->Msiswa->ExcelSiswa($data);
             
             $data2 =array(
-                'username' => $sheet_data[$i]['6'],
-                'password' =>md5($sheet_data[$i]['1']),
-                'nama' => $sheet_data[$i]['0'],
+                'username' => $sheet_data[$i]['2'],
+                'password' =>md5($sheet_data[$i]['5']),
+                'nama' => $sheet_data[$i]['1'],
                 'role' =>1
             );
             $insertAdmin = $this->Msiswa->Tadmin($data2);

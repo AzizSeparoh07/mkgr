@@ -42,11 +42,13 @@ class Survei extends CI_Controller {
 		$soal=$this->input->post('soal');
 		$id_jenis_survei=$this->input->post('id_jenis_survei');
 		$jenis_soal=$this->input->post('jenis_soal');
+		$model_survei=$this->input->post('model_survei');
 
 		$data = array(
 			  'soal' => $soal, 
 			  'id_jenis_survei' => $id_jenis_survei, 
-			  'jenis_soal' => $jenis_soal
+			  'jenis_soal' => $jenis_soal,
+			  'model_survei' =>$model_survei
 		);
 		$this->Msurvei->insertSurvei($data);
 		// $this->session->set_flashdata('msg', 
@@ -71,20 +73,14 @@ class Survei extends CI_Controller {
 		$this->load->view('admin/tambahkepuasaan.php');
 		$this->load->view('admin/layout/footeradmin.php'); 
 	}
-	public function surveisiswa()
-	{
-		$this->load->view('admin/layout/headadmin.php');
-		$this->load->view('mahasiswa/sidebarsiswa.php');
-		$this->load->view('mahasiswa/dashboardsurveisiswa.php');
-		$this->load->view('admin/layout/footeradmin.php'); 
-	}
-	public function tambahsurveimahasiswa()
-	{
-		$this->load->view('admin/layout/headadmin.php');
-		$this->load->view('mahasiswa/sidebarsiswa.php');
-		$this->load->view('mahasiswa/tambahsurveimahasiswa.php');
-		$this->load->view('admin/layout/footeradmin.php'); 
-	}
+	// public function surveisiswa()
+	// {
+	// 	$this->load->view('admin/layout/headadmin.php');
+	// 	$this->load->view('mahasiswa/sidebarsiswa.php');
+	// 	$this->load->view('mahasiswa/dashboardsurveisiswa.php');
+	// 	$this->load->view('admin/layout/footeradmin.php'); 
+	// }
+	
 	public function tambahsurveialumni()
 	{
 		$this->load->view('admin/layout/headadmin.php');

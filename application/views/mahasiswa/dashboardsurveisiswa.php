@@ -7,7 +7,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                             <div class="h5 mb-0 font-weight-bold text-gray-800">Survei Mahasiswa</div>
-                        <div class="pt-5"><a  href="<?php echo site_url('Survei/tambahsurveimahasiswa') ?>" type="button" class="btn btn-primary">Mulai Survei</a> 
+                        <div class="pt-5"><a  href="<?php echo site_url('Homesiswa/tambahsurveimahasiswa') ?>" type="button" class="btn btn-primary">Mulai Survei</a> 
                         </div>
                     </div>
                 </div>
