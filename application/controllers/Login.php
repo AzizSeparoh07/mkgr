@@ -29,11 +29,60 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
-		$data['mahasiswa'] = $this->db->select('*')
-                                        ->from('mahasiswa')
-                                        ->get()->result_array();
-		$this->load->view('login.php',$data); 
+		$this->load->view('login.php'); 
 	}
+
+    function Registrasi() {
+        
+        $data['getAllProvinsi'] = $this->login->getAllProvinsi();
+
+        $this->load->view('v_registrasi.php',$data);
+        $this->load->view('landing/head.php');
+        
+    }
+
+    function get_kota(){
+
+        $id=$this->input->post('id');
+
+        $data=$this->login->getAllKotabyID($id);
+
+        
+
+        echo json_encode($data);
+
+    }
+
+    function add_regis() {
+        
+		$nama = $this->input->post('nama');
+		$nik = $this->input->post('nik');
+		$tempat_lahir = $this->input->post('tempat_lahir');
+		$tanggal_lahir = $this->input->post('tanggal_lahir');
+		$jenis_kelamin = $this->input->post('jenis_kelamin');
+		$provinsi = $this->input->post('provinsi');
+		$id_kota_tujuan = $this->input->post('id_kota_tujuan');
+		$desa = $this->input->post('desa');
+		$no_hp = $this->input->post('no_hp');
+		$alamat = $this->input->post('alamat');
+		$data = array(
+				'nama'=>$nama,
+				'nik'=>$nik,
+				'tempat_lahir'=>$tempat_lahir,
+				'tanggal_lahir'=>$tanggal_lahir,
+				'jenis_kelamin'=>$jenis_kelamin,
+				'kabupaten'=>$provinsi,
+				'kota'=>$id_kota_tujuan,
+				'desa'=>$desa,
+				'no_hp'=>$no_hp,
+				'alamat'=>$alamat
+		);
+		
+		$this->login->tambahMaster($data);
+		redirect('login');
+    }
+
+
 
 	function Plogin() {
 		$username = $this->input->post('username');
@@ -48,9 +97,9 @@ class Login extends CI_Controller {
                 $this->session->set_userdata('nama', $getDataUser[0]->nama);
                 $this->session->set_userdata('role', $loginUser[0]->role);
                 if ($loginUser[0]->role == 1) {
-                    redirect(base_url().'Homesiswa');
+                    redirect(base_url().'Homeadmin');
                 }else {
-                    // redirect(base_url().'Homesiswa');
+                    redirect(base_url().'login');
                 }
                 
             }else{
@@ -69,9 +118,6 @@ class Login extends CI_Controller {
 
 
 
-	function LoginAdmin(){
-		$this->load->view('loginAdmin.php'); 
-	}
 
 	
 }

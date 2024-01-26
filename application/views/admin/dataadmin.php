@@ -23,7 +23,6 @@
                                         <tr>
                                             <th>Username</th>
                                             <th>Password</th>
-                                            <th>Email</th>
                                             <th>Nama</th>
                                             <th>Role</th>
                                         </tr>
@@ -32,7 +31,6 @@
                                         <tr>
                                             <th>Username</th>
                                             <th>Password</th>
-                                            <th>Email</th>
                                             <th>Nama</th>
                                             <th>Role</th>
                                         </tr>
@@ -43,7 +41,6 @@
                                         <tr>
                                             <td><?=$am['username']?></td>
                                             <td><?=$am['password']?></td>
-                                            <td><?=$am['email']?></td>
                                             <td><?=$am['nama']?></td>
                                             <td><?=$am['role']?></td>
                                         </tr>
@@ -63,7 +60,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; TRACER STUDY 2023</span>
+                    <span>Copyright &copy; MKGR 2024</span>
                     </div>
                 </div>
             </footer>

@@ -9,11 +9,11 @@ class Homeadmin extends CI_Controller {
 
 	// $this->load->model('Karyawan_model', 'karyawan');
 
-	if ($this->session->userdata('username') == null) {
+	// if ($this->session->userdata('username') == null) {
 
-		redirect(base_url().'login');
+	// 	redirect(base_url().'login');
 
-	}
+	// }
 
 	// elseif ($this->session->userdata('level') == 'Karyawan') {
 
@@ -38,5 +38,25 @@ class Homeadmin extends CI_Controller {
 		$this->load->view('admin/layout/headadmin.php');
 		$this->load->view('admin/layout/sidebar.php');
 		$this->load->view('admin/dataadmin.php',$data);
+	}
+
+	function DataAnggota(){
+
+		$data['anggota'] = $this->db->select('a.*,b.*,c.*')
+										->from('anggota a')
+										->join('reg_regencies b','b.id=a.kabupaten')
+										->join('reg_districts c','c.id=a.kota')
+										->get()->result_array();
+		$this->load->view('admin/layout/headadmin.php');
+		$this->load->view('admin/layout/sidebar.php');
+		$this->load->view('admin/dataanggota.php',$data);
+	}
+
+	function verifikas($nik){
+		$this->db->set('status', '1')
+					->where('nik', $nik)
+					->update('anggota');
+					
+		redirect(base_url().'Homeadmin/DataAnggota');
 	}
 }

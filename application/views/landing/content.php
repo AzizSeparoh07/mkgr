@@ -6,7 +6,7 @@
         <div class="container">
             <a class="navbar-brand" href="index.html">
                 <i class="bi-back"></i>
-                <span>TRACER STUDY</span>
+                <span>MKGR</span>
             </a>
 
             <div class="d-lg-none ms-auto me-4">
@@ -20,12 +20,12 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-lg-5 me-lg-auto">
                     <li class="nav-item">
-                        <a class="nav-link click-scroll"  href="#section_1">About</a>
+                        <!-- <a class="nav-link click-scroll"  href="#section_1">About</a> -->
                     </li>
                 </ul>
 
                 <div class="d-none d-lg-block">
-                <a href="<?php echo base_url() ?>login" class="navbar-icon bi-person smoothscroll"></a>
+                <a href="<?php echo base_url() ?>login" class="navbar-icon bi-person smoothscroll"></a> LOGIN
                 </div>
             </div>
         </div>
@@ -37,9 +37,9 @@
             <div class="row">
 
                 <div class="col-lg-8 col-12 mx-auto">
-                    <h1 class="text-white text-center">TRACER STUDY</h1>
+                    <h1 class="text-white text-center">MKGR</h1>
 
-                    <h6 class="text-center">Studi Penelusuran Alumni</h6>
+                    <!-- <h6 class="text-center">Studi Penelusuran Alumni</h6> -->
 
                     <form method="get" class="custom-form mt-4 pt-2 mb-lg-0 mb-5" role="search">
                         <div class="input-group input-group-lg">
@@ -438,7 +438,7 @@
             <div class="row">
 
                 <div class="col-12 text-center">
-                    <h2 class="text-white mb-4">Fungsi Tracer Study</h1>
+                    <h2 class="text-white mb-4">Fungsi MKGR</h1>
                 </div>
 
                 <div class="col-lg-10 col-12 mx-auto">
@@ -497,7 +497,7 @@
             <div class="row">
 
                 <div class="col-lg-6 col-12">
-                    <h2 class="mb-4">Cara mengisi Tracer Study</h2>
+                    <h2 class="mb-4">Cara mengisi MKGR</h2>
                 </div>
 
                 <div class="clearfix"></div>
@@ -511,7 +511,7 @@
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Persiapan untuk mengisi Tracer Study?
+                                Persiapan untuk mengisi MKGR?
                                 </button>
                             </h2>
 
@@ -568,7 +568,7 @@
                 <div class="col-lg-3 col-md-6 col-12 mb-3 mb-lg- mb-md-0 ms-auto">
                     <h4 class="mb-3">Head office</h4>
 
-                    <p>Jl. Politeknik Aceh, Desa Pango Raya,
+                    <!-- <p>Jl. Politeknik Aceh, Desa Pango Raya,
                         Kec. Ulee Kareng, Banda Aceh</p>
 
                     <hr>
@@ -587,7 +587,7 @@
                         <a href="mailto:info@politeknikaceh.ac.id" class="site-footer-link">
                             info@politeknikaceh.ac.id
                         </a>
-                    </p>
+                    </p> -->
                 </div> 
 
             </div>

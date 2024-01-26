@@ -19,8 +19,6 @@
 
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url();?>assets/admin/css/sb-admin-2.min.css ?>" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
 
 </head>
 
@@ -41,25 +39,25 @@
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">TRACER STUDY</h1>
+                                        <h1 class="h4 text-gray-900 mb-4">Login </h1>
                                     </div>
-                                    <form class="user" method="POST" action="<?= base_url(); ?>login/Plogin">
+                                    <form method="post" action="<?php echo base_url('login/Plogin'); ?>" class="user" enctype ="multipart/form-data">
                                         <div class="form-group">
-                                        <select id="select-state" name="username" placeholder="Pilih.....">
-                                        <?php foreach ($mahasiswa as $ms) { ?>
-                                            <option value="<?=$ms['NIK']?>"><?=$ms['NIK']?> - <?=$ms['nama']?></option>
-                                        <?php } ?>
-                                        </select>
-
+                                            <input type="text" name="username"class="form-control form-control-user"
+                                                id="exampleInputEmail" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" name="password" placeholder="Contoh yyyy/dd/mm">
+                                            <input type="password" name="password"class="form-control form-control-user"
+                                                id="exampleInputPassword" placeholder="Password">
                                         </div> 
-                                        <button class="btn submit btn-primary btn-user btn-block">
+                                        <button class="btn btn-primary btn-user btn-block">
                                             Login
                                         </button> 
+                                        
                                     </form>
+                                    <a href="<?php echo site_url('Login/registrasi') ?>" class="btn btn-succes btn-user btn-block">
+                                            Registrasi
+                                        </a> 
                                 </div>
                             </div>
                         </div>
@@ -75,22 +73,12 @@
     <!-- Bootstrap core JavaScript-->
     <script src="<?php echo base_url();?>assets/admin/vendor/jquery/jquery.min.js ?>"></script>
     <script src="<?php echo base_url();?>assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js ?>"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
 
     <!-- Core plugin JavaScript-->
     <script src="<?php echo base_url();?>assets/admin/vendor/jquery-easing/jquery.easing.min.js ?>"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="<?php echo base_url();?>assets/admin/js/sb-admin-2.min.js ?>"></script>
-
-    <script>
-         $(document).ready(function () {
-      $('select').selectize({
-          sortField: 'text'
-      });
-  });
-    </script>
 
 </body>
 

@@ -5,7 +5,7 @@
                     <div class="col-lg-4 col-12 mb-4 pb-2">
                         <a class="navbar-brand mb-2" href="index.html">
                             <i class="bi-back"></i>
-                            <span>TRACER STUDY</span>
+                            <span>MKGR</span>
                         </a>
                     </div>
 

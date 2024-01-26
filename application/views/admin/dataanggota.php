@@ -7,15 +7,10 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Data Anggota</h6>
                         </div>
                         <div class="card-body">
-                                    <a href="<?php echo site_url('Datasiswa/Tambahdatasiswa') ?>" class="btn btn-primary btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-plus"></i>
-                                        </span>
-                                        <span class="text">Tambah Data</span>
-                                    </a> 
+                                    
                                     <!-- <a href="#" class="btn btn-danger btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-print"></i>
@@ -26,58 +21,59 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Nama Lengkap</th>
-                                            <th>NIK</th>
-                                            <th>Jenis Kelamin</th>
+                                            <th>Nik</th>
+                                            <th>Nama</th>
                                             <th>Tempat Lahir</th>
                                             <th>Tanggal Lahir</th>
-                                            <th>No WhatsApp</th>
-                                            <th>Email</th>
-                                            <th>Prodi</th>
-                                            <th>Masuk Kuliah</th>
-                                            <th>Lulus Kuliah</th>
-                                            <th>IPK</th>
-                                            <th>Aksi</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Kabupaten</th>
+                                            <th>Kota</th>
+                                            <th>Desa</th>
+                                            <th>Alamat</th>
+                                            <th>No. HP</th>
+                                            <th>Status</th>
                                         </tr>
                                     </thead> 
                                     <tfoot>
                                         <tr>
-                                            <th>Nama Lengkap</th>
-                                            <th>NIK</th>
-                                            <th>Jenis Kelamin</th>
+                                            <th>Nik</th>
                                             <th>Tempat Lahir</th>
                                             <th>Tanggal Lahir</th>
-                                            <th>No WhatsApp</th>
-                                            <th>Email</th>
-                                            <th>Prodi</th>
-                                            <th>Masuk Kuliah</th>
-                                            <th>Lulus Kuliah</th>
-                                            <th>IPK</th>
-                                            <th>Aksi</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th>Kabupaten</th>
+                                            <th>Kota</th>
+                                            <th>Desa</th>
+                                            <th>Alamat</th>
+                                            <th>No. HP</th>
+                                            <th>Status</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <?php foreach ($mahasiswa as $ms) { ?>
+                                        <?php foreach ($anggota as $am) { ?>
                                             
                                         <tr>
-                                            <td><?=$ms['nama']?></td>
-                                            <td><?=$ms['NIK']?></td>
-                                            <td><?=$ms['jenis_kelamin']?></td>
-                                            <td><?=$ms['tempat_lahir']?></td>
-                                            <td><?=$ms['tanggal_lahir']?></td>
-                                            <td><?=$ms['no_wa']?></td>
-                                            <td><?=$ms['email']?></td>
-                                            <td><?=$ms['prodi']?></td>
-                                            <td><?=$ms['masuk_kuliah']?></td>
-                                            <td><?=$ms['lulus_kuliah']?></td>
-                                            <td><?=$ms['IPK']?></td>
-                                            <td> 
-                                                <a href="#" class="btn btn-success btn-circle btn-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                </a>
-                                                <a href="#" class="btn btn-danger btn-circle btn-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </a>
+                                            <td><?=$am['nik']?></td>
+                                            <td><?=$am['nama']?></td>
+                                            <td><?=$am['tempat_lahir']?></td>
+                                            <td><?=$am['tanggal_lahir']?></td>
+                                            <td><?=$am['jenis_kelamin']?></td>
+                                            <td><?=$am['name']?></td>
+                                            <td><?=$am['name_distrik']?></td>
+                                            <td><?=$am['desa']?></td>
+                                            <td><?=$am['alamat']?></td>
+                                            <td><?=$am['no_hp']?></td>
+                                            <td>
+                                                <?php 
+                                                    if ($am['status']==1) {
+                                                        echo "Anggota";
+                                                    }else{ ?>
+
+                                                <?php
+                                                     ?>
+                                                        
+                                                        <a type="button" href="<?php echo base_url(); ?>Homeadmin/verifikas/<?= $am['nik'] ?>" class="btn btn-success btn-md">verifikasi</a>
+                                                  <?php  }
+                                                ?>
                                             </td>
                                         </tr>
                                         <?php
@@ -96,7 +92,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; TRACER STUDY 2023</span>
+                        <span>Copyright &copy; MKGR 2024</span>
                     </div>
                 </div>
             </footer>

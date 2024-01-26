@@ -8,7 +8,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html"> 
-                <div class="sidebar-brand-text mx-3">TRACER STUDY</div>
+                <div class="sidebar-brand-text mx-3">MKGR</div>
             </a>
 
             <!-- Divider -->
@@ -21,33 +21,18 @@
                     <span>Dashboard</span></a>
             </li> 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Survei') ?>">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Data Survei<span></a>
-            </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Datasiswa') ?>">
+                <a class="nav-link" href="<?php echo site_url('Homeadmin/DataAnggota') ?>">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Data Mahasiswa</span></a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Informasi') ?>">
-                    <i class="fas fa-fw fa-info"></i>
-                    <span>Data Informasi</span></a>
+                    <span>Data Anggota</span></a>
             </li> 
             </li> 
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo site_url('Homeadmin/Dataadmin') ?>">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Data Users</span></a>
-            </li> 
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('Laporan') ?>">
-                    <i class="fas fa-fw fa-book"></i>
-                    <span>Laporan</span></a>
             </li> 
         </ul>
         <!-- End of Sidebar -->
